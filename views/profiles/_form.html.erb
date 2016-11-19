@@ -1,14 +1,32 @@
+<script>
+  
+  $(document).on('ready page:load', function() {
+  return CountryStateSelect({
+    country_id: "country_field_id",
+    state_id: "state_field_id"
+  });
+});
+
+  
+</script>
+
+
+
+
+
 <%= simple_form_for(@profile) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :user %>
+    <%#= f.association :user %>
+    
     <%= f.input :name %>
     <%= f.input :phone %>
-    <%= f.input :country %>
-    <%= f.input :state %>
-    <%= f.input :city %>
-    <%= f.input :service_provider %>
+    <%= f.input :country, collection: CountryStateSelect.countries_collection %>
+    <%#= f.input :country %>
+    <%#= f.input :state %>
+    <%#= f.input :city %>
+    <%= f.input :service_provider, label: 'Are you a provider of services?' %>
     <%= f.input :provider_name %>
     <%= f.input :provider_logo_url %>
   </div>
