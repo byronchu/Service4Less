@@ -1,0 +1,1 @@
+json.array! @service_dates, partial: 'service_dates/service_date', as: :service_date

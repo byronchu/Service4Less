@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @service_date.date %>
+</p>
+
+<p>
+  <strong>Qty avail:</strong>
+  <%= @service_date.qty_avail %>
+</p>
+
+<%= link_to 'Edit', edit_service_date_path(@service_date) %> |
+<%= link_to 'Back', service_dates_path %>
