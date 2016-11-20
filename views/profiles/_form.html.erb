@@ -22,9 +22,15 @@
     
     <%= f.input :name %>
     <%= f.input :phone %>
-    <%= f.input :country, collection: CountryStateSelect.countries_collection %>
+    <%= f.input :country_field, collection: CountryStateSelect.countries_collection %>
     <%#= f.input :country %>
+    
     <%#= f.input :state %>
+    
+    <%= options = { form: f, field_names: { :country => :country_field, :state => :state_field } }
+    f.input :state_field, CountryStateSelect.state_options(options) %>
+    
+ 
     <%#= f.input :city %>
     <%= f.input :service_provider, label: 'Are you a provider of services?' %>
     <%= f.input :provider_name %>

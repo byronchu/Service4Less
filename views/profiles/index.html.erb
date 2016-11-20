@@ -21,11 +21,11 @@
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
-        <td><%= profile.user %></td>
+        <td><%= profile.user_id %></td>
         <td><%= profile.name %></td>
         <td><%= profile.phone %></td>
-        <td><%= profile.country %></td>
-        <td><%= profile.state %></td>
+        <td><%= profile.country_field %></td>
+        <td><%= profile.state_field %></td>
         <td><%= profile.city %></td>
         <td><%= profile.service_provider %></td>
         <td><%= profile.provider_name %></td>
