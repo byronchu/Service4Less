@@ -15,6 +15,7 @@ class ServiceDatesController < ApplicationController
   # GET /service_dates/new
   def new
     @service_date = ServiceDate.new
+    
   end
 
   # GET /service_dates/1/edit

@@ -1,6 +1,6 @@
 class Service < ActiveRecord::Base
   belongs_to :user
-  has_one :category
+  belongs_to :category
  
   
   has_many :service_dates
