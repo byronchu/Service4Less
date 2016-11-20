@@ -24,7 +24,8 @@ class ServicesController < ApplicationController
   # POST /services
   # POST /services.json
   def create
-    @service = current_user.services.build(service_params)
+    @service = Service.new(service_params)
+    @service.user_id = current_user.id
 
     respond_to do |format|
       if @service.save
