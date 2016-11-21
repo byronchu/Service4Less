@@ -21,8 +21,8 @@
   <tbody>
     <% @services.each do |service| %>
       <tr>
-        <td><%= service.user %></td>
-        <td><%= service.category %></td>
+        <td><%= service.user.email %></td>
+        <td><%= service.category.name %></td>
         <td><%= service.description %></td>
         <td><%= service.country %></td>
         <td><%= service.state %></td>
@@ -33,6 +33,7 @@
         <td><%= link_to 'Show', service %></td>
         <td><%= link_to 'Edit', edit_service_path(service) %></td>
         <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Add Date / Qty_avail', new_service_date_path(service: service.id) %></td>
       </tr>
     <% end %>
   </tbody>

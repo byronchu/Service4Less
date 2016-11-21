@@ -15,7 +15,7 @@ class ServiceDatesController < ApplicationController
   # GET /service_dates/new
   def new
     @service_date = ServiceDate.new
-    
+    @service_date.service = Service.find(params[:service])
   end
 
   # GET /service_dates/1/edit
@@ -26,7 +26,7 @@ class ServiceDatesController < ApplicationController
   # POST /service_dates.json
   def create
     @service_date = ServiceDate.new(service_date_params)
-
+    
     respond_to do |format|
       if @service_date.save
         format.html { redirect_to @service_date, notice: 'Service date was successfully created.' }
@@ -70,6 +70,6 @@ class ServiceDatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_date_params
-      params.require(:service_date).permit(:date, :qty_avail)
+      params.require(:service_date).permit(:date, :qty_avail, :service_id)
     end
 end
