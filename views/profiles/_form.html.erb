@@ -12,8 +12,8 @@
     
     <%= f.input :name %>
     <%= f.input :phone %>
-    <%#= f.input :country_field, collection: CountryStateSelect.countries_collection %>
-    <%= f.input :country_field %>
+ <%= f.label :country_field %>
+    <%= f.text_field :country_field %>
     
     <%= f.input :state_field %>
     
