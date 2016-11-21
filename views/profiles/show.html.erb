@@ -43,6 +43,7 @@
 <p>
   <strong>Provider logo url:</strong>
   <%= @profile.provider_logo_url %>
+  <%= image_tag @profile.provider_logo_url %>
 </p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
