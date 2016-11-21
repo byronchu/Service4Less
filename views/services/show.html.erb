@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @service.user.email %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= render  @service.category %>
+  
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @service.description %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @service.country %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @service.state %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @service.city %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @service.price %>
+</p>
+
+<p>
+  <strong>Dates:</strong>
+  <%= @service.dates_id %>
+</p>
+
+<p>
+  <strong>Service pic url:</strong>
+  <%= @service.service_pic_url %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

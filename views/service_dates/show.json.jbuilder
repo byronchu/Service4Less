@@ -1,0 +1,1 @@
+json.partial! "service_dates/service_date", service_date: @service_date
