@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @profile.user_id %>
+  <%= @profile.user.email %>
 </p>
 
 <p>
@@ -28,6 +28,8 @@
 <p>
   <strong>City:</strong>
   <%= @profile.city %>
+   
+  <%= image_tag @profile.city_url %>
 </p>
 
 <p>
@@ -41,9 +43,16 @@
 </p>
 
 <p>
-  <strong>Provider logo url:</strong>
-  <%= @profile.provider_logo_url %>
-  <%= image_tag @profile.provider_logo_url %>
+  <!--<strong>Provider logo url:</strong>-->
+  <%#= @profile.picture %><br>
+  <%#= image_tag @profile.picture_url %>
+</p>
+  
+  
+<p>
+  <strong>Pic url:</strong>
+  <%= @profile.pic %><br>
+  <%= image_tag @profile.pic_url %>
 </p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
