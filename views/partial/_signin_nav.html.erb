@@ -1,13 +1,24 @@
 
-  
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        
+        
   <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong> <br>
-    <%= link_to 'Edit Signup Details', edit_user_registration_path %> <br>
-    <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+    
+    <li><%= link_to 'Edit Signup Details', edit_user_registration_path %> </li>
+    <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+    <li>Logged in as <strong><%= current_user.email %></strong></li>
     
   <% else %>
-    <%= link_to 'Sign Up', new_user_registration_path %> <br>
-    <%= link_to 'Sign In', new_user_session_path %> <br>
+    <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+    <li><%= link_to 'Sign In', new_user_session_path %></li>
    <br>
    
    <% end %>
+     </ul>
+    </nav>
+  </div>
+</header>
+   
