@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
   # GET /services
   # GET /services.json
   def index
@@ -70,6 +70,6 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(:user_id, :category_id, :description, :country, :state, :city, :price, :dates_id, :service_pic_url, :pic)
+      params.require(:service).permit(:user_id, :category_id, :description, :country, :state, :city, :price, :dates_id, :service_pic_url)
     end
 end

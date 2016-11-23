@@ -17,8 +17,10 @@
         <td><%= service_date.date %></td>
         <td><%= service_date.qty_avail %></td>
         <td><%= link_to 'Show', service_date %></td>
-        <td><%= link_to 'Edit', edit_service_date_path(service_date) %></td>
-        <td><%= link_to 'Destroy', service_date, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if service.user == current_user %>
+          <td><%= link_to 'Edit', edit_service_date_path(service_date) %></td>
+          <td><%= link_to 'Destroy', service_date, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

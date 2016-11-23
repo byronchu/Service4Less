@@ -1,6 +1,7 @@
 class ServiceDatesController < ApplicationController
   before_action :set_service_date, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
+  
   # GET /service_dates
   # GET /service_dates.json
   def index

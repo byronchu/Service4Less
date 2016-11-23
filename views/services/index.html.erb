@@ -30,10 +30,11 @@
         <td><%= service.price %></td>
         <td><%= service.dates_id %></td>
         <td><%= service.service_pic_url %></td>
-        <td><%= link_to 'Show', service %></td>
-        <td><%= link_to 'Edit', edit_service_path(service) %></td>
-        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Add Date / Qty_avail', new_service_date_path(service: service.id) %></td>
+        <% if service.user == current_user %>
+          <td><%= link_to 'Edit', edit_service_path(service) %></td>
+          <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Add Date / Qty_avail', new_service_date_path(service: service.id) %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
