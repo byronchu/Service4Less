@@ -43,10 +43,9 @@
 </p>
 
 <p>
-  <strong>Service pic url:</strong>
-  <%= @service.pic %>
-  <%= image_tag @service.pic_url %>
-  
+  <strong>Service pic:</strong>
+  <%= image_tag @service.pic_url(:large) %>
+
 </p>
 
 <%= link_to 'Edit', edit_service_path(@service) %> |

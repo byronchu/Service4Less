@@ -45,8 +45,7 @@
   
 <p>
   <strong>Picture</strong>
-
-  <%= image_tag @profile.pic_url %>
+  <%= image_tag @profile.pic_url(:large) %>
 </p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
