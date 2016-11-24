@@ -32,6 +32,22 @@
 
         <td><%= image_tag service.pic_url(:thumb) %></td>
         <td><%= link_to 'Show', service %></td>
+
+           
+       <td><%# link_to 'Buy', new_order_path(product:product.id) %></td>
+       <td>
+         <!-- form for purchase -->
+         <%= simple_form_for(@order) do |f| %>
+           <%= f.input :service_id, input_html: {value: service.id}, as: :hidden %>
+           <%= f.input :qty,  input_html: {value: 1} %>
+           <%= f.submit 'Add to Order', class: 'btn btn-xs btn-success' %>
+         <% end %>
+        
+        
+        
+        
+        
+        
         <% if service.user == current_user %>
           <td><%= link_to 'Edit', edit_service_path(service) %></td>
           <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>

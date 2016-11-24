@@ -5,12 +5,21 @@ class ServicesController < ApplicationController
   # GET /services.json
   def index
     @services = Service.all
+    @order =Order.new
   end
 
   # GET /services/1
   # GET /services/1.json
   def show
   end
+  
+  def buy
+    puts "product purchase #{params[:id]}"
+    redirect_to :back
+  end
+  
+  
+  
 
   # GET /services/new
   def new
