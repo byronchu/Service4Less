@@ -33,10 +33,10 @@
         <td><%= profile.picture %></td>
         <td><%= image_tag profile.pic_url(:thumb) %></td>
        
-        <td><%= link_to 'Show', profile %></td>
+        <td><%= link_to '-Show', profile %></td>
         
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '-Edit', edit_profile_path(profile) %></td>
+        <td><%= link_to '-Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         
         
       </tr>

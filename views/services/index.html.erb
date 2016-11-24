@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>User Email </th>
+      <!--<th>User Email </th>-->
       <th>Category</th>
       <th>Description </th>
-      <th>Country </th>
+      <!--<th>Country </th>-->
       <th>State </th>
       <th>City </th>
       <th>Price </th>
@@ -21,17 +21,17 @@
   <tbody>
     <% @services.each do |service| %>
       <tr>
-        <td><%= service.user.email %></td>
+        <td><%#= service.user.email %></td>
         <td><%= service.category.name %></td>
         <td><%= service.description %></td>
-        <td><%= service.country %></td>
+        <!--<td><%#= service.country %></td>-->
         <td><%= service.state %></td>
         <td><%= service.city %></td>
-        <td><%= service.price %></td>
-        <td><%= service.dates_id %></td>
+        <td>$<%= service.price / 100 %></td>
+        <!--<td><%#= service.dates_id %></td>-->
 
         <td><%= image_tag service.pic_url(:thumb) %></td>
-        <td><%= link_to 'Show', service %></td>
+        <td><%= link_to '-Show-', service %></td>
 
            
        <td><%# link_to 'Buy', new_order_path(product:product.id) %></td>
@@ -49,8 +49,8 @@
         
         
         <% if service.user == current_user %>
-          <td><%= link_to 'Edit', edit_service_path(service) %></td>
-          <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit|', edit_service_path(service) %></td>
+          <td><%= link_to 'Destroy|', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <td><%= link_to 'Add Date / Qty_avail', new_service_date_path(service: service.id) %></td>
         <% end %>
       </tr>
