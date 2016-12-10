@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dopxxaqtl
+  api_key: '347433798915558'
+  api_secret: i1uRTe2MAVL6Kp26WYq0xc2ZFK0
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dopxxaqtl
+  api_key: '347433798915558'
+  api_secret: i1uRTe2MAVL6Kp26WYq0xc2ZFK0
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dopxxaqtl
+  api_key: '347433798915558'
+  api_secret: i1uRTe2MAVL6Kp26WYq0xc2ZFK0
+  enhance_image_tag: true
+  static_image_support: false

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  service_id: 
+  user_id: 
+  qty: 1
+  price: 1
+  completed: 2016-11-24
+
+two:
+  service_id: 
+  user_id: 
+  qty: 1
+  price: 1
+  completed: 2016-11-24
